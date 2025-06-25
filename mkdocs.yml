@@ -1,0 +1,63 @@
+site_name: "Dynatrace Observability Lab: OpenTelemetry Patterns"
+repo_name: "View Code on GitHub"
+repo_url: "https://github.com/dynatrace/demo-opentelemetry-patterns"
+nav:
+  - '1. About': index.md
+  - '2. Getting Started': getting-started.md
+  - '3. Start Demo': start-demo.md
+  - 'Scenarios':
+    - '1. Batching Telemetry': scenario1.md
+    - '2. Add File and OS Information': scenario2.md
+    - '3. Set Log Timestamps': scenario3.md
+    - '4. Set Default Log Severity': scenario4.md
+    - '5. Set Log Severity based on Log Content': scenario5.md
+    - '6. Conditionally adding Key/Value pairs based on Log Content': scenario6.md
+    - '7. Dynamically re-writing Log Lines for Standardisation': scenario7.md
+    - '8. Drop Logs containing a password': scenario8.md
+    - '9. Drop Low Value Logs': scenario9.md
+    - '10. Enriching Logs with Ownership Information': scenario10.md
+  - '8. Cleanup': cleanup.md
+  - '9. Resources': resources.md
+  - "10. What's Next?": whats-next.md
+theme:
+  name: material
+  features:
+    - content.code.copy
+  palette:
+
+  # Palette toggle for automatic mode
+  - media: "(prefers-color-scheme)"
+    toggle:
+      icon: material/brightness-auto
+      name: Switch to light mode
+
+  # Palette toggle for light mode
+  - media: "(prefers-color-scheme: light)"
+    scheme: default 
+    toggle:
+      icon: material/brightness-7
+      name: Switch to dark mode
+
+  # Palette toggle for dark mode
+  - media: "(prefers-color-scheme: dark)"
+    scheme: slate
+    toggle:
+      icon: material/brightness-4
+      name: Switch to system preference
+  features:
+    - content.code.copy
+markdown_extensions:
+  - attr_list
+  - toc:
+      permalink: '#'
+  - md_in_html
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.snippets:
+      base_path: ["docs"]
+plugins:
+    - search
